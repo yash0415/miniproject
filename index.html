@@ -1,3 +1,70 @@
 <h1>This is Master</h1>
 <h2><a href="one.html"></a>This is for one</h2>
 <h2><a href="two.html"></a>This is for two</h2>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 300px;
+  margin: auto;
+}
+
+button {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d9d9d9;
+}
+
+button:active {
+  background-color: #bfbfbf;
+}
+
+#result {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  text-align: right;
+  background-color: #f2f2f2;
+}
+</style>
+</head>
+<body>
+
+<div class="calculator">
+  <input type="text" id="result" disabled>
+  <button onclick="document.getElementById('result').value += '7'">7</button>
+  <button onclick="document.getElementById('result').value += '8'">8</button>
+  <button onclick="document.getElementById('result').value += '9'">9</button>
+  <button onclick="document.getElementById('result').value += '/'">/</button>
+  <button onclick="document.getElementById('result').value += '4'">4</button>
+  <button onclick="document.getElementById('result').value += '5'">5</button>
+  <button onclick="document.getElementById('result').value += '6'">6</button>
+  <button onclick="document.getElementById('result').value += '*'">*</button>
+  <button onclick="document.getElementById('result').value += '1'">1</button>
+  <button onclick="document.getElementById('result').value += '2'">2</button>
+  <button onclick="document.getElementById('result').value += '3'">3</button>
+  <button onclick="document.getElementById('result').value += '-'">-</button>
+  <button onclick="document.getElementById('result').value += '0'">0</button>
+  <button onclick="document.getElementById('result').value += '.'">.</button>
+  <button onclick="document.getElementById('result').value = ''">C</button>
+  <button onclick="document.getElementById('result').value += '+'">+</button>
+  <button onclick="document.getElementById('result').value = eval(document.getElementById('result').value)">=</button>
+</div>
+
+</body>
+</html>
